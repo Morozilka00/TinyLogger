@@ -18,12 +18,11 @@ namespace tinylog {
         c.FormatI = FormatInf;
         c.FormatW = FormatWarn;
         c.FormatE = FormatError;
+
+        FILE* file = fopen(c.file.c_str(), "w");
+        fprintf(file, "");
+        fclose(file);
         return;
-    }
-    void clear(config& c) {
-        FILE* f = fopen(c.file.c_str(), "w");
-        fprintf(f, "");
-        fclose(f);
     }
     void info(config& c, std::string text) {
         time_t now = time(0);

@@ -10,7 +10,6 @@ int main() {
          "[%Y-%m-%d %H:%M:%S] [WARN] ",
           "[%Y-%m-%d %H:%M:%S] [ERROR] "
         );
-    tinylog::clear(c);
     
     tinylog::info(c, "Info");
     tinylog::warn(c, "Warn");
