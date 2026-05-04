@@ -25,8 +25,7 @@ int main() {
          "[%Y-%m-%d %H:%M:%S] [WARN] ",
           "[%Y-%m-%d %H:%M:%S] [ERROR] "
         );
-    tinylog::clear(c);
-    
+
     tinylog::info(c, "Server started");
     tinylog::warn(c, "Low memory");
     tinylog::error(c, "Crash detected");
