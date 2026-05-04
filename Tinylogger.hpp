@@ -25,7 +25,7 @@ namespace tinylog {
         fprintf(f, "");
         fclose(f);
     }
-    void info(config& c, std::string t) {
+    void info(config& c, std::string text) {
         time_t now = time(0);
 
         tm ltm;
@@ -36,15 +36,15 @@ namespace tinylog {
 
         FILE* f = fopen(c.file.c_str(), "a");
 
-        std::string m = std::string(buff) + t.c_str() + "\n";
+        std::string t = std::string(buff) + text + "\n";
 
-        fprintf(f, "%s", m.c_str());
-        fprintf(stdout, "%s", m.c_str());
+        fprintf(f, "%s", t.c_str());
+        fprintf(stdout, "%s", t.c_str());
         fclose(f);
     }
 
 
-    void warn(config& c, std::string t) {
+    void warn(config& c, std::string text) {
         time_t now = time(0);
 
         tm ltm;
@@ -55,15 +55,15 @@ namespace tinylog {
 
         FILE* f = fopen(c.file.c_str(), "a");
 
-        std::string m = std::string(buff) + t.c_str() + "\n";
+        std::string t = std::string(buff) + text + "\n";
 
-        fprintf(f, "%s", m.c_str());
-        fprintf(stdout, "%s", m.c_str());
+        fprintf(f, "%s", t.c_str());
+        fprintf(stdout, "%s", t.c_str());
         fclose(f);
     }
 
 
-    void error(config& c, std::string t) {
+    void error(config& c, std::string text) {
         time_t now = time(0);
 
         tm ltm;
@@ -74,10 +74,10 @@ namespace tinylog {
 
         FILE* f = fopen(c.file.c_str(), "a");
 
-        std::string m = std::string(buff) + t.c_str() + "\n";
+        std::string t = std::string(buff) + text + "\n";
 
-        fprintf(f, "%s", m.c_str());
-        fprintf(stdout, "%s", m.c_str());
+        fprintf(f, "%s", t.c_str());
+        fprintf(stdout, "%s", t.c_str());
         fclose(f);
-    }
+    } 
 }
