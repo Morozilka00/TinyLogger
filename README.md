@@ -1,12 +1,14 @@
-# TinyLogger
+### TinyLogger
 
-TinyLogger (Header Only) — lightweight C++ logging library for simple file and console logging.
+TinyLogger is a minimal header-only C++ logging library designed for simplicity and zero dependencies.
 
-Supports:
-- Info / Warn / Error levels
-- Custom log formats
-- File logging
-- Simple configuration API
+It is made for small projects, learning C++, game prototypes, and embedded-style applications where full logging frameworks are too heavy.
+
+## Features
+Header-only (just drop and use)
+Info / Warn / Error logging
+Custom log format support
+File + console logging
 
 ## usage
 
@@ -23,11 +25,10 @@ int main() {
          "[%Y-%m-%d %H:%M:%S] [WARN] ",
           "[%Y-%m-%d %H:%M:%S] [ERROR] "
         );
-    tinylog::clear(c);
-    
-    tinylog::info(c, "Info");
-    tinylog::warn(c, "Warn");
-    tinylog::error(c, "Error");
+
+    tinylog::info(c, "Server started");
+    tinylog::warn(c, "Low memory");
+    tinylog::error(c, "Crash detected");
 
     return 0;
 }
